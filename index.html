@@ -1,56 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Full Name - Learning about HTML, CSS, JavaScript, and Web Design.">
-    <meta name="author" content="Your Name">
-    <title>WDD 131 – Dynamic Web Fundamentals - Your Name</title>
-
-    <!-- Link to External CSS -->
-    <link rel="stylesheet" href="base.css">
-
-    <!-- Link to Google Fonts (example of two fonts) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
-
-    <!-- External JavaScript file -->
-    <script src="getdates.js" defer></script>
+    <title>WDD 131: Dynamic Web Fundamentals</title>
+    <link rel="stylesheet" href="styles/base.css">
+    
 </head>
 <body>
-
-    <!-- Header Section -->
     <header>
-        <h1>WDD 131 – Dynamic Web Fundamentals</h1>
-        <nav>
-            <ul>
-                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Favorite Scripture</a></li>
-                <li><a href="#">Final Project Folder (Placeholder)</a></li>
-            </ul>
-        </nav>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Baluku Josephats</span></h1>
     </header>
-
-    <!-- Main Section -->
+    <nav>
+        <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+    
     <main>
-        <section class="card">
-            <h2>Section One</h2>
-            <img src="image1.jpg" alt="Description of Image 1">
-            <p>This is the content of the first section.</p>
+        <section class="card about-location">
+            <h2>About Me</h2>
+            <div class="about">
+                
+                <div>
+                    <p>I am Baluku Josephats, a software development student at Brigham Young University (BYU), originally from Uganda. 
+                        As a member of The Church of Jesus Christ of Latter-day Saints (LDS), my faith plays a central role in shaping who I am 
+                        and how I approach life.
+        
+                        Growing up in Uganda, I developed a passion for technology, which led me to pursue software development. At BYU, I am dedicated 
+                        to deepening my understanding of the field and gaining the skills necessary to create innovative solutions. Whether it's web 
+                        development, mobile apps, or other areas of software engineering, I aim to contribute to projects that can make a positive difference.
+        
+                        Beyond academics, my LDS values such as integrity, service, and collaboration guide me in everything I do. I strive to live these 
+                        principles in my studies, work, and relationships, always aiming to grow as an individual while making meaningful contributions.</p>
+                </div> <!-- This was missing -->
+                <img src="images/Jerry.png" alt="Official Flag of Madagascar">
+            </div>
+            <h5 class="heading1">Masaka, Uganda</h5>
+    <div class="line"></div> <!-- Added class "centered" -->
+     
+            <div class="location">
+                <img src="images/Flag.png" alt="Official Flag of Madagascar">
+                <div>
+                    <p>
+                        Uganda, located in East Africa, is known for its rich natural beauty and diverse wildlife. Often called the "Pearl of Africa," it 
+                        features landscapes ranging from the snow-capped Rwenzori Mountains to the savannahs and the shores of Lake Victoria. Uganda is 
+                        home to over 50 ethnic groups and has a vibrant culture influenced by music, dance, and storytelling. The economy is primarily 
+                        agricultural, with coffee being a key export. The country is also famous for its mountain gorillas. While Uganda faces challenges 
+                        like poverty and healthcare, it is steadily advancing in areas such as technology and tourism.</p>
+                </div>
+            </div>
         </section>
-        <section class="card">
-            <h2>Section Two</h2>
-            <img src="image2.jpg" alt="Description of Image 2">
-            <p>This is the content of the second section.</p>
-        </section>
+        
+        
+        <aside class="card resources">
+            <h2>Web Dev Resources</h2>
+            <li><a href="./#">Dev.to Community</a></li>
+        <li style="color: blue;"><a href="./#"> <span style="color: blue;"> Magazine</span></a></li>
+        <li><a href="./#">CSS Tricks</a></li>
+        <li><a href="./#">W3 Schools</a></li>
+        <li style="color: blue;"><a href="./#"> <span style="color: blue;">Udemy</span></a></li>
+        <li><a href="./#">Image Placeholder</a></li>
+    </ul>
+        </aside>
     </main>
+    <script src="scripts/getdates.js"></script>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; <span id="currentyear"></span> Your Name, State/Country</p>
-        <p id="lastModified">Last modified: </p>
+        <p>&copy;2025 🌺 Baluku Josephats 🌺  Uganda</p>
+        <p>Last Modification: 04/03/2025 13:52:33</p>
     </footer>
-
 </body>
 </html>
+
