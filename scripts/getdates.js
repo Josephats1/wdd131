@@ -1,7 +1,6 @@
-// Get the current year for the footer
-const currentYear = new Date().getFullYear();
-document.getElementById("currentyear").textContent = currentYear;
-
-// Get the last modified date of the document
-const lastModified = document.lastModified;
-document.getElementById("lastModified").textContent += lastModified;
+function updateLastModified() {
+    const lastModified = new Date(document.lastModified);
+    document.getElementById("last-modified").textContent = lastModified.toLocaleString();
+}
+// Call the function when the page is fully loaded
+document.addEventListener("DOMContentLoaded", updateLastModified);
