@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="templates.css">
 </head>
 <body>
     <div class="header">Temple Album</div>
-    <div class="nav">
-        <div class="nav" id="navbar">
-    
-        <a href="#">Home</a>
-        <a href="#">Old</a>
-        <a href="#">New</a>
-        <a href="#">Large</a>
-        <a href="#">Small</a>
-    </div>
+<!-- Header -->
+<div class="header">
+    <button class="hamburger" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+ 
+</div>
+
+<!-- Navigation Menu -->
+<nav class="nav">
+    <a href="#">Home</a>
+    <a href="#">Old</a>
+    <a href="#">New</a>
+    <a href="#">Large</a>
+    <a href="#">Small</a>
+</nav>
+
     <h2>Home</h2>
+
     <div class="container">
         <div class="image-box">
             <img src="images/Oakland.png" alt="Oakland California Temple">
@@ -52,14 +62,20 @@
             <p>Salt Lake Temple</p>
         </div>
         <div class="image-box">
-            <img src="images/texas.png" alt="California, Texas Temple">
-            <p>California, Texas Temple</p>
+            <img src="images/texas.png" alt="Houston Texas Temple">
+            <p>Houston Texas Temple</p>
         </div>
     </div>
+
     <script src="templates.js"></script>
-    <div class="footer">
-        &copy;2025  &#x1F33A; Baluku Josephats &#x1F33A;  Uganada <br>
+
+    <footer class="footer">
+        &copy; 2025 &#x1F33A; Baluku Josephats &#x1F33A; Uganda <br>
         Last Modification: <span id="last-modified"></span>
-    </div>
+    </footer>
+
+    <script>
+        document.getElementById("last-modified").textContent = document.lastModified;
+    </script>
 </body>
 </html>

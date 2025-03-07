@@ -1,6 +1,6 @@
-/* Base CSS file */
+/* In styles/base.css */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Applying the Google Font */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
