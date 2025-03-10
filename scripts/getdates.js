@@ -12,3 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
         nav.classList.toggle("show");
     });
 });
+   // Display last modified date
+   document.getElementById("last-modified").textContent = document.lastModified;
+
+   // Toggle the mobile navigation menu visibility
+   document.getElementById('menu-toggle').addEventListener('click', function() {
+       const navMenu = document.getElementById('nav-menu');
+       navMenu.classList.toggle('show');
+   });
