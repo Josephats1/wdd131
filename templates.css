@@ -16,7 +16,7 @@ body {
     font-weight: bold;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures left title & right hamburger */
+    justify-content: space-between; 
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -25,7 +25,7 @@ body {
 .nav {
     background-color: #660080;
     display: flex;
-    justify-content: flex-end; /* Aligns menu to the right */
+    justify-content: flex-end; 
     padding: 10px 20px;
     position: relative;
 }
@@ -51,7 +51,7 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    margin-left: auto; /* Pushes hamburger to the right */
+    margin-left: auto; 
 }
 
 /* Footer */
@@ -66,7 +66,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    padding: 0 10%; /* 20% padding on left and right */
+    padding: 0 10%; 
 }
 
 .image-box {
@@ -83,11 +83,11 @@ img {
     .header {
         display: flex;
         align-items: center;
-        justify-content: space-between; /* Title left, hamburger right */
+        justify-content: space-between; 
     }
 
     .hamburger {
-        display: block; /* Show on mobile */
+        display: block; 
     }
 
     .nav {
@@ -109,7 +109,7 @@ img {
 
     .container {
         grid-template-columns: 1fr;
-        padding: 0 10%; /* Optional: adjust padding for smaller screens */
+        padding: 0 10%; 
     }
 }
 .image-box p {
