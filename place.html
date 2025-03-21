@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China</title>
-    <link rel="stylesheet" href="styles/place.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover essential information about China, including its area, population, capital, languages, and weather conditions.">
+        <meta name="author" content="Baluku Josephat">
+        <title>Explore China: Geography, Population, and Weather</title>
+        <link rel="stylesheet" href="styles/place.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+    
 </head>
 <body>
     <div class="container">
@@ -15,11 +18,19 @@
             <h1>China</h1>
         </header>
         <header class="sub"></header>
+        <!-- Hero Section for Small Screens -->
         <div class="hero">
-            <img src="images/panda.webp" alt="Madagascar Landscape">
+            <img src="images/panda.webp" 
+                 alt="China Panda"
+                 srcset="images/panda-small.webp 110.5kb, 
+                         images/panda-medium.webp 1200w, 
+                         images/panda-large.webp 1800w" 
+                 sizes="(max-width: 600px) 600px, 
+                        (max-width: 1200px) 1000px, 
+                        1800px">
         </div>
+        
         <main>
-          
             <section class="info">
                 <div class="data">
                     <h2>Data</h2>
@@ -33,7 +44,6 @@
                         <li><strong>Calling Code:</strong> +86</li>
                         <li><strong>Internet TLD:</strong> .cn</li>
                     </ul>
-                    
                 </div>
                 
                 <div class="weather">
@@ -44,15 +54,14 @@
                         <li><strong>Wind:</strong> 15 km/h</li>
                         <li><strong>Wind Chill:</strong> 3°C</li>
                     </ul>
-                    
                 </div>
             </section>
         </main>
         <footer>
-            <p>&copy;2025 🌸 Baluku Josephats 🌸 China</p>
+            <p>&copy;2025 🌸 Baluku Josephat 🌸 China</p>
             <p>Last Modification: <span id="lastModified"></span></p>
         </footer>
     </div>
     <script src="scripts/place.js" defer></script>
 </body>
-</html> 
+</html>

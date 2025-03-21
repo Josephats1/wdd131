@@ -8,21 +8,18 @@
 
 /* Body Styling */
 body {
-   
     color: #333;
     text-align: center;
 }
+
 :root {
     --main-bg-color: #f0f0f0;
     --main-text-color: #333;
 }
+
 body {
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
-}
-.element::after {
-    content: " - Added with ::after";
-    color: #999;
 }
 
 /* Container */
@@ -38,6 +35,8 @@ header {
     padding: 20px;
     font-size: 2rem;
 }
+
+/* Main Section with Background Image */
 main {
     display: flex;
     flex-direction: column;
@@ -49,6 +48,7 @@ main {
     position: relative;
     height: 80vh;
 }
+
 /* Info Section */
 .info {
     position: absolute;
@@ -61,7 +61,6 @@ main {
 /* Data & Weather Boxes */
 .data, .weather {
     position: absolute;
-   
     color: #333;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -125,8 +124,7 @@ footer {
 @media (max-width: 768px) {
     main {
         height: auto;
-         /* Remove background image for better readability */
-        background: none; 
+        background: none; /* Remove background image for small screens */
     }
 
     .info {
@@ -143,13 +141,15 @@ footer {
         max-width: 90%;
         text-align: center;
     }
-.footer p {
-    width: 90%;
-}
+
+    footer p {
+        width: 90%;
+    }
+
     h2 {
         color: black;
         padding: 1rem;
-        background-color:#f0f0f0;
+        background-color: #f0f0f0;
         display: block;
         text-align: center;
         font-size: 1.2rem;
@@ -160,27 +160,21 @@ footer {
         display: block;
         margin: 0 auto;
     }
-}
 
-/* Small Devices (Phones) */
-@media (max-width: 480px) {
-    header {
-        font-size: 1rem;
-    }
-
-    .info {
+    /* Hero Image Styles on Small Screens */
+    .hero {
+        display: flex;
+        width: 100%;
+        height: 60vh; /* Adjust as needed */
         justify-content: center;
-        text-align: center;
-        width: 98%;
+        align-items: center;
+        background: #000; /* Fallback background for hero section */
     }
 
-    .data, .weather {
-        padding: 0.8rem;
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 1rem;
+    .hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -193,18 +187,5 @@ footer {
 @media (max-width: 768px) {
     .hero {
         display: flex;
-        width: 100%;
-        /* Adjust as needed */
-        height: 60vh; 
-        justify-content: center;
-        align-items: center;
-        /* Fallback background */
-        background: #000; 
-    }
-
-    .hero img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
 }
