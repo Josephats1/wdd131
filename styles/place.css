@@ -6,22 +6,24 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body Styling */
-body {
-    color: #333;
-    text-align: center;
-}
-
+/* Variables */
 :root {
     --main-bg-color: #f0f0f0;
     --main-text-color: #333;
+    --primary-color: #C8102E;
+    --secondary-color: #006633;
 }
 
+/* Body */
 body {
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
+    text-align: center;
 }
-
+header sub{
+    background-color: #006633;
+    height: 40px;
+}
 /* Container */
 .container {
     max-width: 100%;
@@ -30,21 +32,15 @@ body {
 
 /* Header */
 header {
-    background-color: #C8102E;
+    background-color: var(--primary-color);
     color: white;
     padding: 20px;
     font-size: 2rem;
 }
 
-/* Main Section with Background Image */
+/* Main Section */
 main {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-image: url('images/panda.webp');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background: url('images/panda.webp') no-repeat center center / cover;
     position: relative;
     height: 80vh;
 }
@@ -61,7 +57,7 @@ main {
 /* Data & Weather Boxes */
 .data, .weather {
     position: absolute;
-    color: #333;
+    color: var(--main-text-color);
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     text-align: left;
@@ -69,19 +65,12 @@ main {
     width: 100%;
 }
 
-.data {
-    top: 30px;
-    left: 30px;
-}
-
-.weather {
-    bottom: 30px;
-    right: 30px;
-}
+.data { top: 30px; left: 30px; }
+.weather { bottom: 30px; right: 30px; }
 
 /* Section Titles */
 h2 {
-    background: #006633;
+    background: var(--secondary-color);
     color: white;
     padding: 10px;
     font-size: 1.5rem;
@@ -108,23 +97,31 @@ li {
 
 /* Footer */
 footer {
-    background-color: #C8102E;
+    background-color: var(--primary-color);
     color: white;
     padding: 10px;
-    margin-top: 0;
+    text-align: center;
 }
 
-/* Sub-section */
-.sub {
-    background-color: #006633;
-    height: 16px;
+footer p:hover {
+    color: #FFD700; /* Gold hover effect */
+    cursor: pointer;
 }
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     main {
         height: auto;
-        background: none; /* Remove background image for small screens */
+        background: none;
+    }
+
+    .hero {
+        display: flex;
+        width: 100%;
+        height: 60vh;
+        justify-content: center;
+        align-items: center;
+        background: black url('images/panda.webp') no-repeat center center / cover;
     }
 
     .info {
@@ -142,50 +139,23 @@ footer {
         text-align: center;
     }
 
-    footer p {
-        width: 90%;
-    }
-
     h2 {
         color: black;
         padding: 1rem;
-        background-color: #f0f0f0;
-        display: block;
+        background-color: var(--main-bg-color);
         text-align: center;
         font-size: 1.2rem;
     }
 
     .weather-icon {
-        margin-top: 20px;
+        margin: 20px auto;
         display: block;
-        margin: 0 auto;
     }
 
-    /* Hero Image Styles on Small Screens */
-    .hero {
-        display: flex;
-        width: 100%;
-        height: 60vh; /* Adjust as needed */
-        justify-content: center;
-        align-items: center;
-        background: #000; /* Fallback background for hero section */
-    }
-
-    .hero img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+    /* Hide Hero on Large Screens */
+    .hero { display: flex; }
 }
 
-/* Hide Hero on Large Screens */
-.hero {
-    display: none;
-}
-
-/* Show Hero Only on Small Screens */
-@media (max-width: 768px) {
-    .hero {
-        display: flex;
-    }
+@media (min-width: 769px) {
+    .hero { display: none; }
 }
