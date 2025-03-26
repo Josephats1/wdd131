@@ -83,4 +83,3 @@ document.getElementById("menu-toggle").addEventListener("click", function() {
     navMenu.classList.toggle("show");
     hamburger.classList.toggle("active");
 });
-
