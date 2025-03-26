@@ -73,13 +73,11 @@ document.getElementById("menu-toggle").addEventListener("click", function() {
     navMenu.classList.toggle("show");
     hamburger.classList.toggle("active");
 });
-
- // Corrected the typo here: 'hambuger' to 'hamburger'
-document.getElementById("menu-toggle").addEventListener("click", function() {
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
-    const hamburger = document.getElementById("menu-toggle");
 
-    // Toggle the 'show' class for the nav and 'active' class for the hamburger
-    navMenu.classList.toggle("show");
-    hamburger.classList.toggle("active");
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("show"); // Toggles visibility
+    });
 });
