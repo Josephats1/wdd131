@@ -14,7 +14,8 @@ const temples = [
 
 function displayTemples(filteredTemples) {
     const container = document.getElementById("temple-container");
-    container.innerHTML = ""; // Clear previous content
+     // Clear previous content
+    container.innerHTML = ""; 
 
     filteredTemples.forEach(temple => {
         const card = document.createElement("div");
@@ -44,7 +45,8 @@ function filterTemples(filterType) {
     } else if (filterType === "small") {
         filtered = temples.filter(t => t.area < 10000);
     } else {
-        filtered = temples; // Show all if "home" is selected
+         // Show all if "home" is selected
+        filtered = temples; 
     }
 
     displayTemples(filtered);
