@@ -1,9 +1,12 @@
 /* General Styles */
 :root {
-    --fa-animation-delay: 0s; /* Ensure valid animation-delay */
-    --fa-rotate-angle: 0deg;  /* Ensure valid transform rotate */
+    --fa-animation-delay: 0s; 
+    --fa-rotate-angle: 0deg;   
 }
-
+.fa-rotate-by {
+    /* Ensure a valid default rotation */
+    transform: rotate(0deg) !important;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -56,7 +59,8 @@ body {
 .hamburger {
     display: none;
     font-size: 30px;
-    color: #fff; /* Changed from blue for better contrast */
+     /* Changed from blue for better contrast */
+    color: #fff; 
     background: none;
     border: none;
     cursor: pointer;
