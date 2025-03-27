@@ -1,53 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Temple Album - A Collection of Historic Temples</title>
-        <meta name="description" content="Explore our Temple Album showcasing ancient and modern temples from around the world, including details on their architecture and history.">
-        <meta name="author" content="Baluku Josephats">
-        <!-- Google Fonts Embed Link (for example) -->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="styles/filter.css">
-        <script src="scripts/filter.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album - A Collection of Historic Temples</title>
+    <meta name="description" content="Explore our Temple Album showcasing ancient and modern temples from around the world, including details on their architecture and history.">
+    <meta name="author" content="Baluku Josephat">
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/filter.css">
+</head>
+
 <body>
-    <header>
-    <div class="header">
-       <h1 id="h1">Temple Album</h1> 
-       <button class="hamburger" id="menu-toggle">
+    <header class="header">
+        <h1 class="title">Temple Album</h1>
+        <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
-    </div>
-    <div class="nav" id="nav-menu">
-        <a href="#" onclick="filterTemples('home')">
-            <button>All Temples</button>
-        </a>
-        <a href="#" onclick="filterTemples('old')">
-            <button>Old Temples</button>
-        </a>
-        <a href="#" onclick="filterTemples('new')">
-            <button>New Temples</button>
-        </a>
-        <a href="#" onclick="filterTemples('large')">
-            <button>Large Temples</button>
-        </a>
-        <a href="#" onclick="filterTemples('small')">
-            <button>Small Temples</button>
-        </a>
-    </div>
     </header>
-    <!-- Temple Cards Container -->
+
+    <!-- Navigation Bar -->
+    <nav class="nav" id="nav-menu">
+        <button onclick="filterTemples('home')">All Temples</button>
+        <button onclick="filterTemples('old')">Old Temples</button>
+        <button onclick="filterTemples('new')">New Temples</button>
+        <button onclick="filterTemples('large')">Large Temples</button>
+        <button onclick="filterTemples('small')">Small Temples</button>
+    </nav>
+
+    <!-- Main Content -->
     <main>
-        <h2 id="h2">A Showcase of Historic Temples</h2>
-        <div id="temple-container" class="temple-grid"></div>
+        <h2 class="subtitle">A Showcase of Historic Temples</h2>
+        <section id="temple-container" class="temple-grid"></section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        &copy; 2025 &#x1F33A; Baluku Josephats &#x1F33A; Uganda <br>
-        Last Modification: <span id="last-modified"></span>
+        &copy; 2025 🌺 Baluku Josephats 🌺 Uganda 
+  <p class="foot"> Last Modification: <span id="last-modified"></span></p>
     </footer>
+    <!-- JavaScript (loaded at the end for better performance) -->
+    <script src="scripts/filter.js"></script>
 </body>
 </html>

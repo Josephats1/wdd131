@@ -5,6 +5,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header */
 .header {
     background-color: #4B006E;
     color: #fff;
@@ -49,44 +50,16 @@ body {
     color: #fff;
     text-decoration: none;
     padding: 10px 15px;
- 
     font-size: 14px;
     display: inline-block;
     border-radius: 5px;
 }
 
 .nav a:hover {
-    background-color: #660080;
+    background-color: #7B1FA2;
 }
 
-/* Hamburger Menu (Properly Positioned on Right) */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    color: rgb(37, 18, 207);
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-/* Temple Grid */
-.temple-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-#h1 {
-    font-size: 40px;
-}
-
-#h2 {
-    text-align: center;
-}
-
-/* Hamburger Menu (Properly Positioned on Right) */
+/* Hamburger Menu */
 .hamburger {
     display: none;
     font-size: 30px;
@@ -129,18 +102,26 @@ body {
 
 /* Footer */
 .footer {
-    height: 50px;
+    height: auto;
     background-color: #4B006E;
     color: azure;
     text-align: center;
+    line-height: 50px;
 }
+.foot {
+    background-color: #4B006E;
+    margin-top: 0%;
+    padding-top: 0%;
+   
+}
+/* Responsive Styles */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
     }
 
     .nav {
-        display: none; /* Hide nav by default */
+        display: none;
         flex-direction: column;
         align-items: center;
         position: absolute;
@@ -152,14 +133,28 @@ body {
         padding-bottom: 10px;
     }
 
-    .nav.show { /* Show when 'show' class is toggled */
+    .nav.show {
         display: flex;
     }
 }
 
-#h2 {
-    font-size: small;
+/* Fix Heading IDs */
+h1 {
+    font-size: 40px;
+    text-align: center;
 }
-#h1  {
-    font-size: smaller;
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
 }
