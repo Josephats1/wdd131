@@ -1,3 +1,9 @@
+/* General Styles */
+:root {
+    --fa-animation-delay: 0s; /* Ensure valid animation-delay */
+    --fa-rotate-angle: 0deg;  /* Ensure valid transform rotate */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -26,10 +32,10 @@ body {
 }
 
 .nav button {
-    background-color: #4B006E; 
-    color: #fff; 
+    background-color: #4B006E;
+    color: #fff;
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -43,19 +49,6 @@ body {
 }
 
 .nav button:active {
-    background-color: #7B1FA2; 
-}
-
-.nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 14px;
-    display: inline-block;
-    border-radius: 5px;
-}
-
-.nav a:hover {
     background-color: #7B1FA2;
 }
 
@@ -63,7 +56,7 @@ body {
 .hamburger {
     display: none;
     font-size: 30px;
-    color: rgb(37, 18, 207);
+    color: #fff; /* Changed from blue for better contrast */
     background: none;
     border: none;
     cursor: pointer;
@@ -102,24 +95,21 @@ body {
 
 /* Footer */
 .footer {
-    height: auto;
     background-color: #4B006E;
     color: azure;
     text-align: center;
-    line-height: 50px;
+    padding: 15px;
+    font-size: 14px;
 }
-.foot {
-    background-color: #4B006E;
-    margin-top: 0%;
-    padding-top: 0%;
-   
-}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
+    /* Show Hamburger Menu */
     .hamburger {
         display: block;
     }
 
+    /* Hide Navigation by Default */
     .nav {
         display: none;
         flex-direction: column;
@@ -127,14 +117,23 @@ body {
         position: absolute;
         width: 100%;
         background-color: #660080;
-        top: 50px;
+        top: 60px;
         right: 0;
         z-index: 1000;
         padding-bottom: 10px;
     }
 
+    /* Show Navigation When Active */
     .nav.show {
         display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    /* Button Spacing for Mobile */
+    .nav button {
+        width: 90%;
+        padding: 10px;
+        margin: 5px 5px;
     }
 }
 
@@ -156,5 +155,17 @@ h2 {
 
     h2 {
         font-size: 18px;
+    }
+}
+
+/* Smooth Fade-In Effect for Menu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
