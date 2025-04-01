@@ -1,5 +1,7 @@
 /* General Styles */
 /* In your styles.css or filter.css file, use @import */
+/* General Styles */
+/* In your styles.css or filter.css file, use @import */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
@@ -7,7 +9,7 @@
     --fa-rotate-angle: 0deg; }
 
     .fa-rotate-by {
-        --fa-rotate-angle: 0deg; /* Ensure a valid rotation value */
+        /* Ensure a valid rotation value */
         transform: rotate(var(--fa-rotate-angle));
     }
     
