@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover essential information about China, including its area, population, capital, languages, and weather conditions.">
+        <meta name="author" content="Baluku Josephat">
+        <title>Explore China: Geography, Population, and Weather</title>
+        <link rel="stylesheet" href="styles/place.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+    
+<body>
+    <div class="container">
+        <header>
+            <h1>China</h1>
+        </header>
+        
+        <div class="header2"></div>
+        
+        
+        <!-- Hero Section for Small Screens -->
+        
+        <div class="hero">
+            <img src="images/panda.webp" 
+     alt="China Panda"
+     srcset="images/panda.webp 600w, 
+             images/panda-medium.webp 1200w, 
+             images/panda-large.webp 1800w" 
+     sizes="(max-width: 600px) 600px, 
+            (max-width: 1200px) 1000px, 
+            1800px">
+
+        </div>
+        
+        <main>
+            <section class="info">
+                <div class="data">
+                    <h2>Data</h2>
+                    <ul>
+                        <li><strong>Area:</strong> 9,596,961 sq km</li>
+                        <li><strong>Population:</strong> 1,412,600,000</li>
+                        <li><strong>Capital:</strong> Beijing</li>
+                        <li><strong>Languages:</strong> Mandarin Chinese</li>
+                        <li><strong>Currency:</strong> Renminbi (CNY)</li>
+                        <li><strong>Time Zone:</strong> UTC+8</li>
+                        <li><strong>Calling Code:</strong> +86</li>
+                        <li><strong>Internet TLD:</strong> .cn</li>
+                    </ul>
+                </div>
+                
+                <div class="weather">
+                    <h2>Weather <img src="images/cloudy.svg" alt="Weather Icon" class="weather-icon"></h2>
+                    <ul>
+                        <li><strong>Temperature:</strong> 5°C</li>
+                        <li><strong>Conditions:</strong> Clear Sky</li>
+                        <li><strong>Wind:</strong> 15 km/h</li>
+                        <li><strong>Wind Chill:</strong> 3°C</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy;2025 🌸 Baluku Josephat 🌸 China</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </footer>
+    </div>
+    <script src="scripts/place.js" defer></script>
+</body>
+</html>

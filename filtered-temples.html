@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album - A Collection of Historic Temples</title>
+    <meta name="description" content="Explore our Temple Album showcasing ancient and modern temples from around the world, including details on their architecture and history.">
+    <meta name="author" content="Baluku Josephat">
+    
+    <!-- Google Fonts (No change needed, as it's linked externally) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/filter.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">Temple Album</h1>
+        <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Navigation Bar (Moved outside header) -->
+    <nav class="nav" id="nav-menu">
+        <a href="#" onclick="filterTemples('home')">All Temples</a>
+        <a href="#" onclick="filterTemples('old')">Old Temples</a>
+        <a href="#" onclick="filterTemples('new')">New Temples</a>
+        <a href="#" onclick="filterTemples('large')">Large Temples</a>
+        <a href="#" onclick="filterTemples('small')">Small Temples</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h2 class="subtitle">A Showcase of Historic Temples</h2>
+        <section id="temple-container" class="temple-grid"></section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2025 🌺 Baluku Josephats 🌺 Uganda 
+        <p class="foot">Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/filter.js"></script>
+</body>
+</html>

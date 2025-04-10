@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="This page offers detailed product reviews and ratings from users, helping you make informed decisions before purchasing.">
+    <meta name="author" content="Baluku Josephats">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <main>
+        <div class="card">
+            <h1>Product Review</h1>  
+        </div>
+      
+        <form action="review.html" method="get">
+            <!-- Product Selection -->
+            <label for="product">Product Name:</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+            
+            <!-- Rating -->
+            <fieldset>
+                <legend>Overall Rating:</legend>
+                <label><input type="radio" name="rating" value="1" required> &#9733;</label>
+                <label><input type="radio" name="rating" value="2"> &#9733;&#9733;</label>
+                <label><input type="radio" name="rating" value="3"> &#9733;&#9733;&#9733;</label>
+                <label><input type="radio" name="rating" value="4"> &#9733;&#9733;&#9733;&#9733;</label>
+                <label><input type="radio" name="rating" value="5"> &#9733;&#9733;&#9733;&#9733;&#9733;</label>
+            </fieldset>
+            
+            <!-- Date of Installation -->
+            <label for="install-date">Date of Installation:</label>
+            <input type="date" id="install-date" name="install-date" required>
+            
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Useful Features:</legend>
+                <label><input type="checkbox" name="features" value="durability"> Durability</label>
+                <label><input type="checkbox" name="features" value="efficiency"> Efficiency</label>
+                <label><input type="checkbox" name="features" value="design"> Design</label>
+                <label><input type="checkbox" name="features" value="design"> UX</label>
+            </fieldset>
+            
+            <!-- Written Review -->
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" rows="4"></textarea>
+            
+            <!-- User Name -->
+            <label for="username">Your Name:</label>
+            <input type="text" id="username" name="username">
+            
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Review">
+            <footer class="footer">
+                &copy; 2025 🌺 Baluku Josephats 🌺 Uganda 
+                <p class="foot">Last Modification: <span id="last-modified"></span></p>
+            </footer>
+
+        </form>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="scripts/form.js"></script>
+</body>
+</html>
