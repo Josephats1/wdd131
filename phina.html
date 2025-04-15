@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>To My One & Only: Josephine 💖</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d0d;
+      font-family: 'Courier New', monospace;
+      color: white;
+      overflow: hidden;
+    }
+
+    .container {
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff69b4;
+      text-shadow: 0 0 10px #ff69b4;
+    }
+
+    #typewriter {
+      font-size: 1.5rem;
+      width: 80%;
+      margin: 20px auto;
+      border-right: 2px solid #ff69b4;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .meter {
+      margin-top: 40px;
+      width: 300px;
+      height: 25px;
+      background: #333;
+      border-radius: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    .fill {
+      width: 0;
+      height: 100%;
+      background: linear-gradient(to right, #ff69b4, #ff1493);
+      border-radius: 20px;
+      transition: width 1s ease;
+    }
+
+    .love-button {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      margin-top: 40px;
+      font-size: 1.2rem;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff69b4;
+    }
+
+    .letter {
+      margin-top: 30px;
+      font-size: 1.1rem;
+      color: #fefefe;
+      display: none;
+      animation: fadeIn 2s ease forwards;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Easter egg */
+    .easter {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>To: Josephine 💖</h1>
+    <div id="typewriter"></div>
+
+    <div class="meter" onmouseover="fillMeter()">
+      <div class="fill" id="loveFill"></div>
+    </div>
+
+    <button class="love-button" onclick="showLetter()">Decode Love 💌</button>
+
+    <div class="letter" id="loveLetter">
+      My Dearest Josephine,<br><br>
+      If I were a function, you'd be my only parameter.<br>
+      If love was a language, I'd write our story in binary: 1s for the good days, 0s for the bad — because every bit matters.<br><br>
+      You debug the chaos in my life, compile my happiness, and execute pure joy in my heart.<br>
+      In the syntax of my soul, your name is the only valid input. You’re not just part of my life —<br>
+      <strong>You are my main() function.</strong><br><br>
+      Forever coding love with you,<br>
+      <em>— Your Dev, Baluku Josephat 💻❤️</em>
+    </div>
+
+    <div class="easter">
+      <pre>// Favorite Function
+function myFavorite(person) {
+  return person === "Josephine";
+}</pre>
+    </div>
+  </div>
+
+  <canvas id="heartCanvas"></canvas>
+
+  <script>
+    // Typewriter Effect
+    const messages = [
+      "You're the bug I never want to fix. 💘",
+      "Josephine, you complete my code.",
+      "You're not just in my heart... you're in every loop of it."
+    ];
+    let i = 0, j = 0;
+    const typewriter = document.getElementById("typewriter");
+
+    function type() {
+      if (i < messages.length) {
+        if (j < messages[i].length) {
+          typewriter.textContent += messages[i].charAt(j);
+          j++;
+          setTimeout(type, 50);
+        } else {
+          i++;
+          j = 0;
+          setTimeout(() => {
+            typewriter.textContent = '';
+            type();
+          }, 2000);
+        }
+      }
+    }
+    type();
+
+    function fillMeter() {
+      document.getElementById("loveFill").style.width = "100%";
+    }
+
+    function showLetter() {
+      document.getElementById("loveLetter").style.display = "block";
+    }
+
+    // Heart Trail
+    const canvas = document.getElementById("heartCanvas");
+    const ctx = canvas.getContext("2d");
+    let hearts = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    document.addEventListener("mousemove", (e) => {
+      hearts.push({x: e.clientX, y: e.clientY, alpha: 1, size: Math.random() * 8 + 4});
+    });
+
+    function drawHearts() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < hearts.length; i++) {
+        let h = hearts[i];
+        ctx.fillStyle = `rgba(255,105,180,${h.alpha})`;
+        ctx.beginPath();
+        ctx.moveTo(h.x, h.y);
+        ctx.arc(h.x, h.y, h.size, 0, Math.PI * 2);
+        ctx.fill();
+        h.y -= 1;
+        h.alpha -= 0.01;
+        if (h.alpha <= 0) hearts.splice(i, 1);
+      }
+      requestAnimationFrame(drawHearts);
+    }
+    drawHearts();
+  </script>
+</body>
+</html>
